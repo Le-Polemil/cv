@@ -195,6 +195,7 @@ export const PROJECTS_LIST: ProjectType[] = [
     dateStart: "Mai 2023",
     dateEnd: "",
     isDone: true,
+    link: "https://github.com/Cobelt/cv",
   },
   {
     name: "Meetup bonnes pratiques CSS",
