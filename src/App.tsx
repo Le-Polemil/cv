@@ -1,15 +1,17 @@
 import "./App.css"
 import Tabs from "./components/Tabs"
-import { JOBS, HOBBIES, PROFILE } from "./constants"
+import { JOBS, HOBBIES, PROFILE, STACK } from "./constants"
 import useTabContext from "./contexts/TabContext"
 
 import Jobs from "./pages/Jobs"
 import Hobbies from "./pages/Hobbies"
 import Profile from "./pages/Profile"
+import Stack from "./pages/Skills"
 
 const TAB_CONTENT = {
   [PROFILE]: <Profile />,
   [JOBS]: <Jobs />,
+  [STACK]: <Stack />,
   [HOBBIES]: <Hobbies />,
 }
 
