@@ -1,4 +1,4 @@
-import { EducationType } from "../../constants"
+import { EducationType } from "../../types"
 
 export default function Education({
   grade,

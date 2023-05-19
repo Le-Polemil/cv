@@ -1,5 +1,7 @@
 import me from "../../assets/me.jpg"
 import me2 from "../../assets/me2.jpg"
+import Github from "../../components/icons/Github"
+import Linkedin from "../../components/icons/Linkedin"
 
 const AVAILABLE = true
 
@@ -11,7 +13,7 @@ export default function Profile() {
           <h1 className="mb-6 md:mb-12">
             <span className="highlight md:px-1.5">Profil</span>
           </h1>
-          <div className="">
+          <div>
             <h4 className="flex items-center mb-1 whitespace-nowrap">
               <span className="material-icons mr-2">face</span>
               <span className="text-base">Paul-Emile</span>
@@ -36,7 +38,7 @@ export default function Profile() {
                 >
                   🇫🇷
                 </span>
-                <span className="">natif</span>
+                <span>natif</span>
               </div>
 
               <div>
@@ -46,7 +48,7 @@ export default function Profile() {
                 >
                   🇬🇧
                 </span>
-                <span className="">confirmé</span>
+                <span>confirmé</span>
               </div>
 
               <div>
@@ -56,7 +58,7 @@ export default function Profile() {
                 >
                   🇷🇺
                 </span>
-                <span className="">notions</span>
+                <span>notions</span>
               </div>
             </h5>
           </div>
@@ -92,7 +94,7 @@ export default function Profile() {
           : "Je suis actuellement déjà pas mal occupé !"}
       </p>
 
-      <p className="">
+      <p>
         Diplômé d'un
         <span className="text-amber-400 font-bold mx-1">Bac+3</span>
         en informatique, j'exerce le métier de développeur web depuis
@@ -107,8 +109,8 @@ export default function Profile() {
         <span className="text-amber-400 font-bold ml-1">VueJS</span>.
       </p>
 
-      <p className="">
-        Ma stack préférée :{" "}
+      <p>
+        Ma stack préférée :
         <span className="text-amber-400 font-bold ml-1">React</span>, ES6+,
         <span className="text-amber-400 font-bold ml-1">Typescript</span>, SCSS,
         Tailwind,
@@ -116,6 +118,25 @@ export default function Profile() {
         <span className="text-amber-400 font-bold mx-1">Strapi ♥</span>pour le
         back
       </p>
+
+      <div className="flex flex-wrap gap-y-5 gap-x-16">
+        <a
+          href="htts://github.com/Cobelt"
+          target="_blank"
+          className="flex text-white hover:text-rose-400 transition-colors"
+        >
+          <Github className="mr-2" size={30} />
+          <span className="underline-on-hover">Cobelt</span>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/paul-emile-moreau/"
+          target="_blank"
+          className="flex text-white hover:text-rose-400 transition-colors"
+        >
+          <Linkedin className="mr-2" size={30} />
+          <span className="underline-on-hover">Paul-Emile Moreau</span>
+        </a>
+      </div>
     </div>
   )
 }

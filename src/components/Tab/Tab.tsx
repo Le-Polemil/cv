@@ -1,4 +1,4 @@
-import { TabType } from "../../constants"
+import { TabType } from "../../types"
 import useTabContext from "../../contexts/TabContext"
 
 export default function Tab({ id, tabIndex, icon, text }: TabType) {

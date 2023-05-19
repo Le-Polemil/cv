@@ -1,4 +1,4 @@
-import { HobbyType } from "../../constants"
+import { HobbyType } from "../../types"
 
 interface HobbyProps {
   hobby: HobbyType

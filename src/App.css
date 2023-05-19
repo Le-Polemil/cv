@@ -49,6 +49,25 @@ h1 {
   }
 }
 
+.underline-on-hover {
+  position: relative;
+}
+
+.underline-on-hover:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 100%;
+  transition: right 0.5s;
+  height: 1px;
+  background-color: currentColor;
+}
+
+*:hover > .underline-on-hover:before {
+  right: 0;
+}
+
 .shadow-around {
   border-radius: 2px;
   box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.6);

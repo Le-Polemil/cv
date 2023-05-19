@@ -1,4 +1,4 @@
-import { JobType } from "../../constants"
+import { JobType } from "../../types"
 
 export default function Job(job: JobType) {
   return (

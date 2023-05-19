@@ -1,4 +1,4 @@
-import { ProjectType } from "../../constants"
+import { ProjectType } from "../../types"
 
 export default function Project({
   name,
@@ -12,7 +12,7 @@ export default function Project({
 }: ProjectType) {
   return (
     <div>
-      <div className="">
+      <div>
         {isDone && (
           <div
             className="inline-flex bg-lime-600 rounded-full px-1 md:px-3 py-1 mr-2 mb-1 items-center"

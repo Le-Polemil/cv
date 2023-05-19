@@ -3,7 +3,7 @@ import { HOBBIES_LIST } from "../../constants"
 
 export default function Hobbies() {
   return (
-    <div className="">
+    <div>
       <h1 className="mb-6 md:mb-12">
         <span className="highlight md:px-1.5">Loisirs</span>
       </h1>
