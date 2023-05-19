@@ -121,7 +121,7 @@ export default function Profile() {
 
       <div className="flex flex-wrap gap-y-5 gap-x-16">
         <a
-          href="htts://github.com/Cobelt"
+          href="https://github.com/Cobelt"
           target="_blank"
           className="flex text-white hover:text-rose-400 transition-colors"
         >
