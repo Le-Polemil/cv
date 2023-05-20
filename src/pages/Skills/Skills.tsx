@@ -22,14 +22,17 @@ export default function Skills() {
       </h1>
       <div className="flex flex-col gap-y-14">
         {fullSkillsList.map((skillList, index) => (
-          <div className="flex flex-col gap-y-12 md:gap-y-4">
+          <div key={index} className="flex flex-col gap-y-12 md:gap-y-4">
             {skillList.map(({ name, skills }) => (
-              <div>
+              <div key={name}>
                 <h2 className="font-bold mb-1">{name}</h2>
 
                 <div className="flex flex-wrap gap-y-2 gap-x-3">
                   {skills.map((skill) => (
-                    <div className="bg-indigo-800 rounded-full px-3 py-1 whitespace-nowrap overflow-hidden text-ellipsis">
+                    <div
+                      key={skill}
+                      className="bg-indigo-800 rounded-full px-3 py-1 whitespace-nowrap overflow-hidden text-ellipsis"
+                    >
                       {skill}
                     </div>
                   ))}

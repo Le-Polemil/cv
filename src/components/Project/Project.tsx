@@ -52,7 +52,7 @@ export default function Project({
       </div>
 
       <div className="flex flex-wrap mb-2">
-        <div className="text-rose-400 ">
+        <div className="text-rose-400">
           {dateStart ?? "Pas encore commencé"}
           {dateStart && (dateEnd ?? "Aujourd'hui") && (
             <span className="mx-1">-</span>

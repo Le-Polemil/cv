@@ -136,7 +136,8 @@ export const PROJECTS_LIST: ProjectType[] = [
     name: "Portfolio",
     details: "ReactJS / bac à sable perso",
     isDev: true,
-    dateStart: "2022",
+    dateStart: "Fractionné",
+    dateEnd: "",
   },
   {
     name: "Ecriture de romans fantasy",

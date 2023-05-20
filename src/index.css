@@ -8,7 +8,7 @@
   font-size: 1.2rem;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgb(255, 245, 255);
   background-color: #242424;
 
   font-synthesis: none;
@@ -33,6 +33,14 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+}
+
+::selection {
+  background-color: rgb(251 113 133);
+}
+
+img::selection {
+  background-color: transparent;
 }
 
 @media screen and (max-width: 767px) {
