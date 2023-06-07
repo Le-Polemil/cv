@@ -1,11 +1,18 @@
+import { useTranslation } from "react-i18next"
 import HobbyCard from "../../components/HobbyCard"
-import { HOBBIES_LIST } from "../../constants"
+import { GET_HOBBIES, HobbiesDataType } from "../../queries/hobbies"
+import { useQuery } from "@apollo/client"
 
 export default function Hobbies() {
+  const [t] = useTranslation()
+  const { data } = useQuery<HobbiesDataType>(GET_HOBBIES)
+
+  const hobbies = data?.hobbies?.data ?? []
+
   return (
     <div>
       <h1 className="mb-6 md:mb-12">
-        <span className="highlight md:px-1.5">Loisirs</span>
+        <span className="highlight md:px-1.5">{t("tab.jobs")}</span>
       </h1>
 
       <div
@@ -15,9 +22,10 @@ export default function Hobbies() {
             "repeat(auto-fit, minmax(calc(6em + 11vw), 1fr))",
         }}
       >
-        {HOBBIES_LIST.map((hobby, index) => (
-          <HobbyCard key={hobby.name} hobby={hobby} tabIndex={10 + index} />
-        ))}
+        {hobbies?.length > 0 &&
+          hobbies.map((hobby, index) => (
+            <HobbyCard key={hobby.id} hobby={hobby} tabIndex={10 + index} />
+          ))}
       </div>
     </div>
   )

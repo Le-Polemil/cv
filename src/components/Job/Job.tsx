@@ -1,23 +1,39 @@
-import { JobType } from "../../types"
+import { useTranslation } from "react-i18next"
+import { JobsDataType } from "../../queries/jobs"
+import * as dayjs from "dayjs"
+import localizedFormat from "dayjs/plugin/localizedFormat"
+dayjs.extend(localizedFormat)
 
-export default function Job(job: JobType) {
+export default function Job(job: JobsDataType["jobs"]["data"][0]) {
+  const [t] = useTranslation()
+
+  if (!job) return null
+
+  const { attributes } = job
+  const { title, company, companyDetails, dateStart, dateEnd, missions } =
+    attributes ?? {}
+
+  console.log({ start: dateStart })
+
   return (
     <div>
       <div className="flex flex-wrap font-bold gap-x-10 md:gap-x-20">
-        <h2>{job.title}</h2>
+        <h2>{t(title)}</h2>
 
         <div className="text-amber-400 font-bold">
-          {job.company} ({job.companyDetails})
+          {company} ({t(companyDetails)})
         </div>
       </div>
 
-      <div className="text-rose-400 mb-6">
-        {job.dateStart} - {job.dateEnd}
+      <div className="capitalize text-rose-400 mb-6">
+        {dateStart && dayjs(dateStart).format("MMMM YYYY")}
+        {dateStart && dateEnd && " - "}
+        {dateEnd && dayjs(dateEnd).format("MMMM YYYY")}
       </div>
 
       <ul className="list-disc pl-4">
-        {job.missions.map((mission) => (
-          <li key={mission}>{mission}</li>
+        {missions.map((mission) => (
+          <li key={mission?.id}>{t(mission?.key)}</li>
         ))}
       </ul>
     </div>

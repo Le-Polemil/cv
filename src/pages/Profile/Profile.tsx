@@ -1,17 +1,23 @@
+import { useTranslation } from "react-i18next"
 import me from "../../assets/me.jpg"
 import me2 from "../../assets/me2.jpg"
+import FranceFlag from "../../components/icons/FranceFlag"
 import Github from "../../components/icons/Github"
+import GreatBritainFlag from "../../components/icons/GreatBritainFlag"
 import Linkedin from "../../components/icons/Linkedin"
+import RussiaFlag from "../../components/icons/RussiaFlag"
 
 const AVAILABLE = true
 
 export default function Profile() {
+  const [t] = useTranslation()
+
   return (
     <div className="flex flex-col gap-y-6">
       <div className="flex flex-col-reverse lg:flex-row items-start lg:items-end -mt-14 xs:-mt-0">
         <div className="flex-1 z-10">
           <h1 className="mb-6 md:mb-12">
-            <span className="highlight md:px-1.5">Profil</span>
+            <span className="highlight md:px-1.5">{t("tab.profile")}</span>
           </h1>
           <div>
             <h4 className="flex items-center mb-1 whitespace-nowrap">
@@ -23,42 +29,44 @@ export default function Profile() {
               <span className="material-icons mr-2 text-amber-400">
                 celebration
               </span>
-              <span>23 ans</span>
+              <span>{t("profile.info.age")}</span>
             </h4>
             <h4 className="flex flex-wrap items-center mb-1">
               <span className="material-icons mr-2">place</span>
-              <span className="text-amber-400 font-bold mr-1">Flers,</span>
-              <span>Normandie</span>
+              <span className="text-amber-400 font-bold mr-1">
+                {t("profile.info.address.0")},
+              </span>
+              <span>{t("profile.info.address.1")}</span>
             </h4>
             <h5 className="flex flex-wrap items-center gap-x-4 gap-y-2 mb-1 md:pl-1">
-              <div>
+              <div className="flex">
                 <span
                   className="text-amber-400 font-bold mr-2"
                   title="Drapeau Français"
                 >
-                  🇫🇷
+                  <FranceFlag className="rounded-lg" />
                 </span>
-                <span>natif</span>
+                <span>{t("profile.langs.fr")}</span>
               </div>
 
-              <div>
+              <div className="flex">
                 <span
                   className="text-amber-400 font-bold mr-2"
                   title="Drapeau Anglais"
                 >
-                  🇬🇧
+                  <GreatBritainFlag className="rounded-lg" />
                 </span>
-                <span>confirmé</span>
+                <span>{t("profile.langs.en")}</span>
               </div>
 
-              <div>
+              <div className="flex">
                 <span
                   className="text-amber-400 font-bold mr-2"
                   title="Drapeau Russe"
                 >
-                  🇷🇺
+                  <RussiaFlag className="rounded-lg" />
                 </span>
-                <span>notions</span>
+                <span>{t("profile.langs.ru")}</span>
               </div>
             </h5>
           </div>
@@ -89,34 +97,37 @@ export default function Profile() {
         >
           adjust
         </span>
-        {AVAILABLE
-          ? "Actuellement disponible pour vos missions en full remote !"
-          : "Je suis actuellement déjà pas mal occupé !"}
+        {AVAILABLE ? t("profile.available.true") : t("profile.available.false")}
       </p>
 
       <p>
-        Diplômé d'un
-        <span className="text-amber-400 font-bold mx-1">Bac+3</span>
-        en informatique, j'exerce le métier de développeur web depuis
-        <span className="text-amber-400 font-bold ml-1">5 ans</span>.
+        {t("profile.digest.xp.0")}
+        <span className="text-amber-400 font-bold mx-1">
+          {t("profile.digest.xp.1")}
+        </span>
+        {t("profile.digest.xp.2")}
+        <span className="text-amber-400 font-bold ml-1">
+          {t("profile.digest.xp.3")}
+        </span>
+        .
         <br />
         <span className="text-amber-400 font-bold mr-1">React JS</span>
-        reste mon framework préféré, mais j'ai déjà eu à faire à
+        {t("profile.favFramework.0")}
         <span className="text-amber-400 font-bold mx-1">
           Angular (JS et 2+)
         </span>
-        et
+        {t("common.and")}
         <span className="text-amber-400 font-bold ml-1">VueJS</span>.
       </p>
 
       <p>
-        Ma stack préférée :
+        {t("profile.favStack.0")}
         <span className="text-amber-400 font-bold ml-1">React</span>, ES6+,
         <span className="text-amber-400 font-bold ml-1">Typescript</span>, SCSS,
         Tailwind,
-        <span className="text-amber-400 font-bold mx-1">GraphQL</span>ou REST et
-        <span className="text-amber-400 font-bold mx-1">Strapi ♥</span>pour le
-        back
+        <span className="text-amber-400 font-bold mx-1">GraphQL</span>
+        {t("common.or")} API REST {t("common.and")}
+        <span className="text-amber-400 font-bold mx-1">Strapi ♥</span>
       </p>
 
       <div className="flex flex-wrap gap-y-5 gap-x-16">
@@ -126,7 +137,7 @@ export default function Profile() {
           className="flex text-white hover:text-rose-400 transition-colors"
         >
           <Github className="mr-2" size={30} />
-          <span className="underline-on-hover">Cobelt</span>
+          <span className="underline-on-hover">Github</span>
         </a>
         <a
           href="https://www.linkedin.com/in/paul-emile-moreau/"
@@ -134,7 +145,7 @@ export default function Profile() {
           className="flex text-white hover:text-rose-400 transition-colors"
         >
           <Linkedin className="mr-2" size={30} />
-          <span className="underline-on-hover">Paul-Emile Moreau</span>
+          <span className="underline-on-hover">Linkedin</span>
         </a>
       </div>
     </div>

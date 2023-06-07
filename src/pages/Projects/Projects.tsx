@@ -1,8 +1,13 @@
 import { Fragment } from "react"
-import { PROJECTS_LIST } from "../../constants"
 import Project from "../../components/Project"
+import { useQuery } from "@apollo/client"
+import { GET_PROJECTS, ProjectsDataType } from "../../queries/projects"
 
 export default function Projects() {
+  const { data } = useQuery<ProjectsDataType>(GET_PROJECTS)
+
+  const projects = data?.projects?.data ?? []
+
   return (
     <div className="mb-6">
       <h1 className="mb-6 md:mb-12">
@@ -10,14 +15,15 @@ export default function Projects() {
       </h1>
 
       <div className="flex flex-col gap-12 md:gap-20">
-        {PROJECTS_LIST.map((project, index) => (
-          <Fragment key={project.name}>
-            <Project {...project} />
-            {index < PROJECTS_LIST.length - 1 && (
-              <div className="md:hidden border-b-2 border-rose-400 mx-10" />
-            )}
-          </Fragment>
-        ))}
+        {projects?.length > 0 &&
+          projects.map((project, index) => (
+            <Fragment key={project.id}>
+              <Project {...project} />
+              {index < projects.length - 1 && (
+                <div className="md:hidden border-b-2 border-rose-400 mx-10" />
+              )}
+            </Fragment>
+          ))}
       </div>
     </div>
   )

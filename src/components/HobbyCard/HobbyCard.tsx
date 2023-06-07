@@ -1,11 +1,18 @@
-import { HobbyType } from "../../types"
+import { useTranslation } from "react-i18next"
+import { HobbiesDataType } from "../../queries/hobbies"
 
 interface HobbyProps {
-  hobby: HobbyType
+  hobby: HobbiesDataType["hobbies"]["data"][0]
   tabIndex: number
 }
 
 export default function HobbyCard({ hobby, tabIndex }: HobbyProps) {
+  const [t] = useTranslation()
+
+  if (!hobby) return null
+
+  const { attributes } = hobby ?? {}
+
   return (
     <div
       role="presentation"
@@ -14,8 +21,10 @@ export default function HobbyCard({ hobby, tabIndex }: HobbyProps) {
     >
       <img
         className="absolute left-0 right-0 w-full h-full"
-        src={hobby.bgImg}
-        alt={hobby.name}
+        src={
+          "https://bo.bhuumi.land" + attributes?.media?.data?.attributes?.url
+        }
+        alt={attributes?.media?.data?.attributes?.name}
       />
       <div
         className={[
@@ -27,13 +36,13 @@ export default function HobbyCard({ hobby, tabIndex }: HobbyProps) {
         <div className="flex-1" />
 
         <h2 className="flex items-center font-bold">
-          {hobby.name}{" "}
+          {t(attributes.name)}{" "}
           <span className="material-icons p-2" style={{ fontSize: 28 }}>
-            {hobby.icon}
+            {attributes.icon}
           </span>
         </h2>
 
-        <p className="mt-2">{hobby.description}</p>
+        <p className="mt-2">{t(attributes.description)}</p>
       </div>
     </div>
   )

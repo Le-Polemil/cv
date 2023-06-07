@@ -1,23 +1,31 @@
 import { Fragment } from "react"
 import Job from "../../components/Job"
-import { JOBS_LIST } from "../../constants"
+import { useTranslation } from "react-i18next"
+import { useQuery } from "@apollo/client"
+import { GET_JOBS, JobsDataType } from "../../queries/jobs"
 
 export default function Jobs() {
+  const [t] = useTranslation()
+  const { data } = useQuery<JobsDataType>(GET_JOBS)
+
+  const jobs = data?.jobs?.data ?? []
+
   return (
     <div className="mb-6">
       <h1 className="mb-6 md:mb-12">
-        <span className="highlight md:px-1.5">Exp. Pros</span>
+        <span className="highlight md:px-1.5">{t("tab.jobs")}</span>
       </h1>
 
-      <div className="flex flex-col gap-12 md:gap-24">
-        {JOBS_LIST.map((job, index) => (
-          <Fragment key={job.title + job.company}>
-            <Job {...job} />
-            {index < JOBS_LIST.length - 1 && (
-              <div className="md:hidden border-b-2 border-rose-400 mx-10" />
-            )}
-          </Fragment>
-        ))}
+      <div className="flex flex-col-reverse gap-12 md:gap-24">
+        {jobs?.length > 0 &&
+          jobs.map((job, index) => (
+            <Fragment key={job.attributes.title + job.attributes.company}>
+              <Job {...job} />
+              {index < jobs.length - 1 && (
+                <div className="md:hidden border-b-2 border-rose-400 mx-10" />
+              )}
+            </Fragment>
+          ))}
       </div>
     </div>
   )
