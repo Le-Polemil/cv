@@ -137,7 +137,15 @@ export default function Profile() {
           className="flex text-white hover:text-rose-400 transition-colors"
         >
           <Github className="mr-2" size={30} />
-          <span className="underline-on-hover">Github</span>
+          <span className="underline-on-hover">Cobelt</span>
+        </a>
+        <a
+          href="https://github.com/mue-js"
+          target="_blank"
+          className="flex text-white hover:text-rose-400 transition-colors"
+        >
+          <Github className="mr-2" size={30} />
+          <span className="underline-on-hover">MueJS</span>
         </a>
         <a
           href="https://www.linkedin.com/in/paul-emile-moreau/"
