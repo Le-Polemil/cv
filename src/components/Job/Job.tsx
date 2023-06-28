@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
 import { JobsDataType } from "../../queries/jobs"
-import * as dayjs from "dayjs"
+import dayjs from "dayjs"
 import localizedFormat from "dayjs/plugin/localizedFormat"
 dayjs.extend(localizedFormat)
 
@@ -13,8 +13,6 @@ export default function Job(job: JobsDataType["jobs"]["data"][0]) {
   const { title, company, companyDetails, dateStart, dateEnd, missions } =
     attributes ?? {}
 
-  console.log({ start: dateStart })
-
   return (
     <div>
       <div className="flex flex-wrap font-bold gap-x-10 md:gap-x-20">
@@ -26,9 +24,9 @@ export default function Job(job: JobsDataType["jobs"]["data"][0]) {
       </div>
 
       <div className="capitalize text-rose-400 mb-6">
-        {dateStart && dayjs(dateStart).format("MMMM YYYY")}
+        {dateStart && dayjs?.(dateStart)?.format?.("MMMM YYYY")}
         {dateStart && dateEnd && " - "}
-        {dateEnd && dayjs(dateEnd).format("MMMM YYYY")}
+        {dateEnd && dayjs?.(dateEnd)?.format?.("MMMM YYYY")}
       </div>
 
       <ul className="list-disc pl-4">

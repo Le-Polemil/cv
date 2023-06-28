@@ -10,6 +10,7 @@ import "dayjs/locale/en" // import locale
 import "dayjs/locale/ru" // import locale
 
 import { TabContextProvider } from "./contexts/TabContext.tsx"
+import { API_BASE_URL } from "./constants/index.ts"
 import client from "./apollo.ts"
 import App from "./App.tsx"
 import "./index.css"
@@ -37,7 +38,7 @@ i18n
     },
 
     backend: {
-      loadPath: "https://bo.bhuumi.land/api/i18n/{{lng}}",
+      loadPath: `${API_BASE_URL}/i18n/{{lng}}`,
 
       crossDomain: true,
     },

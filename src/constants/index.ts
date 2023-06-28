@@ -1,4 +1,4 @@
-export const API_BASE_URL = "https://bo.bhuumi.land"
+export const API_BASE_URL = "https://bo.bhuumi.land/api"
 export const GRAPHQL_BASE_URL = "https://graphql.bhuumi.land"
 
 export const PROFILE = "profile"
