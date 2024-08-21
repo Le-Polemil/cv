@@ -125,12 +125,12 @@ export default function Profile() {
 
       <div className="flex flex-wrap gap-y-5 gap-x-16">
         <a
-          href="https://github.com/Cobelt"
+          href="https://github.com/Le-Polemil"
           target="_blank"
           className="flex text-white hover:text-rose-400 transition-colors"
         >
           <Github className="mr-2" size={30} />
-          <span className="underline-on-hover">Cobelt</span>
+          <span className="underline-on-hover">Le-Polemil</span>
         </a>
         <a
           href="https://github.com/mue-js"

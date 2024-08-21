@@ -1,6 +1,7 @@
+import { useQuery } from "@apollo/client"
+import { t } from "i18next"
 import { Fragment } from "react"
 import Project from "../../components/Project"
-import { useQuery } from "@apollo/client"
 import { GET_PROJECTS, ProjectsDataType } from "../../queries/projects"
 
 export default function Projects() {
@@ -11,7 +12,7 @@ export default function Projects() {
   return (
     <div className="mb-6">
       <h1 className="mb-6 md:mb-12">
-        <span className="highlight md:px-1.5">Projets</span>
+        <span className="highlight md:px-1.5">{t("tab.projects")}</span>
       </h1>
 
       <div className="flex flex-col gap-12 md:gap-20">

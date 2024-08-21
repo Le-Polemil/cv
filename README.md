@@ -28,7 +28,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/Cobelt/cv">
+  <a href="https://github.com/Le-Polemil/cv">
     <img src="public/chad-icon.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -39,9 +39,9 @@
     <br />
     <a href="https://cv.bhuumi.land">View Demo</a>
     ·
-    <a href="https://github.com/Cobelt/cv/issues">Report Bug</a>
+    <a href="https://github.com/Le-Polemil/cv/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Cobelt/cv/issues">Request Feature</a>
+    <a href="https://github.com/Le-Polemil/cv/issues">Request Feature</a>
   </p>
 </div>
 
@@ -105,7 +105,7 @@ This project is not meant to be cloned or forked, but if you wanna do so, you sh
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Cobelt/cv.git
+   git clone https://github.com/Le-Polemil/cv.git
    ```
 2. Install NPM packages
    ```sh
@@ -138,7 +138,7 @@ This project is not meant to be cloned or forked, but if you wanna do so, you sh
   - [ ] Do GraphQL requests
 - [ ] Add translations to english and russian (through Strapi)
 
-See the [open issues](https://github.com/Cobelt/cv/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/Le-Polemil/cv/issues) for a full list of proposed features (and known issues).
 
 <p align="right"><a href="#readme-top">back to top ⬆️</a></p>
 
@@ -164,25 +164,25 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Paul-Emile Moreau - cobelt60@gmail.com
+Paul-Emile Moreau - Le-Polemil60@gmail.com
 
-Project Link : [https://github.com/Cobelt/cv](https://github.com/Cobelt/cv)
+Project Link : [https://github.com/Le-Polemil/cv](https://github.com/Le-Polemil/cv)
 
 <p align="right"><a href="#readme-top">back to top ⬆️</a></p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/Cobelt/cv.svg?style=for-the-badge
-[contributors-url]: https://github.com/Cobelt/cv/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Cobelt/cv.svg?style=for-the-badge
-[forks-url]: https://github.com/Cobelt/cv/network/members
-[stars-shield]: https://img.shields.io/github/stars/Cobelt/cv.svg?style=for-the-badge
-[stars-url]: https://github.com/Cobelt/cv/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Cobelt/cv.svg?style=for-the-badge
-[issues-url]: https://github.com/Cobelt/cv/issues
-[license-shield]: https://img.shields.io/github/license/Cobelt/cv.svg?style=for-the-badge
-[license-url]: https://github.com/Cobelt/cv/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/Le-Polemil/cv.svg?style=for-the-badge
+[contributors-url]: https://github.com/Le-Polemil/cv/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Le-Polemil/cv.svg?style=for-the-badge
+[forks-url]: https://github.com/Le-Polemil/cv/network/members
+[stars-shield]: https://img.shields.io/github/stars/Le-Polemil/cv.svg?style=for-the-badge
+[stars-url]: https://github.com/Le-Polemil/cv/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Le-Polemil/cv.svg?style=for-the-badge
+[issues-url]: https://github.com/Le-Polemil/cv/issues
+[license-shield]: https://img.shields.io/github/license/Le-Polemil/cv.svg?style=for-the-badge
+[license-url]: https://github.com/Le-Polemil/cv/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/paul-emile-moreau/
 [product-screenshot]: https://media.discordapp.net/attachments/795025538913140806/1109080698238795776/image.png?width=1387&height=669
