@@ -1,7 +1,7 @@
+import { useQuery } from "@apollo/client"
 import { useTranslation } from "react-i18next"
 import HobbyCard from "../../components/HobbyCard"
 import { GET_HOBBIES, HobbiesDataType } from "../../queries/hobbies"
-import { useQuery } from "@apollo/client"
 
 export default function Hobbies() {
   const [t] = useTranslation()
@@ -12,7 +12,7 @@ export default function Hobbies() {
   return (
     <div>
       <h1 className="mb-6 md:mb-12">
-        <span className="highlight md:px-1.5">{t("tab.jobs")}</span>
+        <span className="highlight md:px-1.5">{t("tab.hobbies")}</span>
       </h1>
 
       <div

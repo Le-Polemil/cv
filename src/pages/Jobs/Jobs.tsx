@@ -1,7 +1,7 @@
-import { Fragment } from "react"
-import Job from "../../components/Job"
-import { useTranslation } from "react-i18next"
 import { useQuery } from "@apollo/client"
+import { Fragment } from "react"
+import { useTranslation } from "react-i18next"
+import Job from "../../components/Job"
 import { GET_JOBS, JobsDataType } from "../../queries/jobs"
 
 export default function Jobs() {
@@ -13,7 +13,7 @@ export default function Jobs() {
   return (
     <div className="mb-6">
       <h1 className="mb-6 md:mb-12">
-        <span className="highlight md:px-1.5">{t("tab.jobs")}</span>
+        <span className="highlight md:px-1.5">{t("tab.timeline")}</span>
       </h1>
 
       <div className="flex flex-col-reverse gap-12 md:gap-24">

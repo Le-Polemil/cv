@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next"
-import me from "../../assets/me.jpg"
 import me2 from "../../assets/me2.jpg"
 import FranceFlag from "../../components/icons/FranceFlag"
 import Github from "../../components/icons/Github"
@@ -72,17 +71,11 @@ export default function Profile() {
           </div>
         </div>
 
-        <div className="relative px-0 py-5 md:py-0 lg:px-8 mt-10 sm:mt-0 -mb-12 md:mb-0">
+        <div className="self-end px-0 py-5 md:py-0 lg:px-8 mt-10 sm:mt-0 -mb-10 md:mb-0">
           <img
-            className="rounded-full overflow-hidden"
-            src={me}
-            alt="A pic of myself"
-            style={{ width: "calc(3em + 12vw)", maxWidth: "14rem" }}
-          />
-          <img
-            className="absolute top-5 md:top-0 rounded-full overflow-hidden aspect-square object-cover animate-fade-in"
+            className="rounded-full overflow-hidden aspect-square object-cover"
             src={me2}
-            alt="Another pic of myself"
+            alt="That's me !"
             style={{ width: "calc(3em + 12vw)", maxWidth: "14rem" }}
           />
         </div>
